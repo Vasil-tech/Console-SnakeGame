@@ -30,8 +30,8 @@ namespace ConsoleApp2
         {
             if (direction == Direction.RIGHT)     { x = x + offset; }
             else if (direction == Direction.LEFT) { x = x - offset; }
-            else if (direction == Direction.UP)   { y = y + offset; }
-            else if (direction == Direction.DOWN) { y = y - offset; }            
+            else if (direction == Direction.UP)   { y = y - offset; }
+            else if (direction == Direction.DOWN) { y = y + offset; }            
         }
 
         public void Draw()

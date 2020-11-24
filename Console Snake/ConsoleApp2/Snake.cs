@@ -38,5 +38,13 @@ namespace ConsoleApp2
             return nextPoint;
 
         }
+
+        public void Handle(ConsoleKey key)
+        {
+            if (key == ConsoleKey.LeftArrow) { direction = Direction.LEFT; }
+            else if (key == ConsoleKey.RightArrow) { direction = Direction.RIGHT; }
+            else if (key == ConsoleKey.UpArrow) { direction = Direction.UP; }
+            else if (key == ConsoleKey.DownArrow) { direction = Direction.DOWN; }
+        }
     }
 }

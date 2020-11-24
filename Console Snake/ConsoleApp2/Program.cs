@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
+
 
 namespace ConsoleApp2
 {
@@ -40,7 +42,16 @@ namespace ConsoleApp2
             z.Drow ();
             z.Move ();
 
-            Console.ReadLine ();
+            while (true)
+            {
+                if (Console.KeyAvailable)
+                {
+                    ConsoleKeyInfo key = Console.ReadKey ();
+                    z.Handle (key.Key);
+                }
+                Thread.Sleep (100);
+                z.Move ();
+            }
         }
     }  
 }
